@@ -19,11 +19,11 @@ gtSerial.flush();
 void loop() {
   // put your main code here, to run repeatedly:
 if(Serial.available()){
-    my_name = Serial.readStringUntil('\n');
+    code = Serial.readStringUntil('\n');
     gtSerial.println(code);
 }
 if(gtSerial.available()){
-  my_name = gtSerial.readStringUntil('\n');
+  code = gtSerial.readStringUntil('\n');
   Serial.println(code);
 }
 delay(1000);
